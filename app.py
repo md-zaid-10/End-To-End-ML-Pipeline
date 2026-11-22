@@ -84,10 +84,10 @@ if __name__ == "__main__":
         # Log a file to the run's own Artifacts tab
         mlflow.log_artifact("requirements.txt")
 
-        #predictions = lr.predict(train_x)
-        #signature = infer_signature(train_x, predictions)
+        predictions = lr.predict(train_x)
+        signature = infer_signature(train_x, predictions)
 
-        # Tracking server is chosen BEFORE start_run (see top of __main__).
+        # Tracking server is chosen BEFORE start_run via MLFLOW_TRACKING_URI (from .env).
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
         # Model registry does not work with file store
