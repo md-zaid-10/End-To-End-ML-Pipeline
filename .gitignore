@@ -1,0 +1,25 @@
+# Python virtual environment
+venv/
+.venv/
+env/
+
+# Python cache / build files
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# MLflow local tracking data (runs, models, artifacts)
+mlruns/
+mlartifacts/
+mlflow.db
+
+# Secrets / credentials (e.g. DagsHub token)
+.env
+*.env
+
+# OS / editor files
+.DS_Store
+.vscode/
+.idea/
